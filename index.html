@@ -1980,11 +1980,14 @@
             impactObserver.observe(el);
         });
 
-        // Download resume function
-        function downloadResume() {
-            alert('Resume download functionality would integrate with your actual resume file. This is a placeholder for the download functionality.');
-            // In production, this would trigger a download of the actual PDF file
-        }
+       function downloadResume() {
+    const link = document.createElement('a');
+    link.href = 'resume.pdf';
+    link.download = 'V_Jayashree_Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+}
 
         // Create floating particles
         function createParticles() {
